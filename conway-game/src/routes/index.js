@@ -1,5 +1,6 @@
 import React from 'react';
 import { Router, Route } from 'react-router-dom';
+import { Navbar } from '../containers';
 
 import { RouteAuthNeeded, RouteNoAuthNeeded } from '../hoc';
 import { HomePage, LoginPage, RegisterPage, GamePage } from '../pages';
@@ -7,6 +8,7 @@ import { HomePage, LoginPage, RegisterPage, GamePage } from '../pages';
 const Routes = (props) => {
 	return (
 		<Router history={props.history}>
+			<Navbar />
 			<Route exact path='/' component={RouteNoAuthNeeded(HomePage)} />
 			<Route
 				exact
