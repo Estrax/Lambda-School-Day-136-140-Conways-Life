@@ -24,7 +24,7 @@ class Navbar extends React.Component {
 				<div className='collapse navbar-collapse' id='navbar'>
 					<ul className='navbar-nav ml-auto'>
 						<li className='nav-item'>
-							<Link to='/game' className='nav-link'>
+							<Link to='/' className='nav-link'>
 								Game
 							</Link>
 						</li>
