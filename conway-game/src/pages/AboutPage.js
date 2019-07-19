@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 class AboutPage extends React.Component {
 	render() {
 		return (
-			<div>
-				<h1>About</h1>
+			<div className='about'>
+				<h1 className='title text-center'>About</h1>
 				<p>
 					<b>The Game of Life</b>, also known simply as <b>Life</b>,
 					is a cellular automaton devised by the British mathematician
