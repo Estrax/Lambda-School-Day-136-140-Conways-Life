@@ -27,9 +27,17 @@ const Routes = (props) => {
 				path='/register'
 				component={RouteNoAuthNeeded(RegisterPage)}
 			/>
-			<Route exact path='/game' component={RouteAuthNeeded(GamePage)} />
-			<Route exact path='/about' component={RouteAuthNeeded(AboutPage)} />
-			<Route exact path='/rules' component={RouteAuthNeeded(RulesPage)} />
+			<Route exact path='/game' component={RouteNoAuthNeeded(GamePage)} />
+			<Route
+				exact
+				path='/about'
+				component={RouteNoAuthNeeded(AboutPage)}
+			/>
+			<Route
+				exact
+				path='/rules'
+				component={RouteNoAuthNeeded(RulesPage)}
+			/>
 		</Router>
 	);
 };
