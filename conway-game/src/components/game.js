@@ -575,6 +575,59 @@ class Game extends Component {
 							Randomize board
 						</button>
 					</div>
+					<div className='controls'>
+						<div>
+							<h2 className='title'>Set grid size:</h2>
+							<select
+								name='size_new'
+								defaultValue={20}
+								onChange={this.onChange}
+							>
+								<option value={10}>10</option>
+								<option value={20}>20</option>
+								<option value={40}>40</option>
+								<option value={50}>50</option>
+								<option value={80}>80</option>
+								<option value={100}>100</option>
+							</select>
+							<button onClick={this.gridUpdate}>Set</button>
+						</div>
+						<div>
+							<h2 className='title'>Set simulation speed:</h2>
+							<select
+								name='simulationSpeed'
+								defaultValue={1000}
+								onChange={this.onChange}
+							>
+								<option value={1000}>1</option>
+								<option value={500}>2</option>
+								<option value={250}>3</option>
+								<option value={100}>4</option>
+								<option value={50}>5</option>
+								<option value={10}>6</option>
+							</select>
+						</div>
+						<div>
+							<h2 className='title'>
+								Set color (hint: you can select from{' '}
+								{this.state.colors_available.length} available
+								ones!)
+							</h2>
+							<select
+								name='color'
+								defaultValue={this.state.colors_available[0]}
+								onChange={this.onColorChange}
+							>
+								{this.state.colors_available.map((elem, i) => {
+									return (
+										<option key={i} value={elem}>
+											{elem}
+										</option>
+									);
+								})}
+							</select>
+						</div>
+					</div>
 				</div>
 				<h1 className='title text-center'>
 					Generation: {this.state.generation}
