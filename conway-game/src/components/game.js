@@ -51,9 +51,9 @@ class Game extends Component {
 				const stroke_color = this.cw.getColor(
 					this.state.colors_available[0]
 				);
-				const dimensions = 600;
-				const size = 10;
-				const simulationSpeed = 100;
+				const dimensions = 800;
+				const size = 20;
+				const simulationSpeed = 1000;
 
 				this.gridRerender(
 					color,
@@ -203,12 +203,13 @@ class Game extends Component {
 	}
 
 	boardNext() {
-		const board = { ...this.state };
+		const board = { ...this.state, grid: {} };
 		const grid = this.refs.grid;
 		const context = grid.getContext('2d');
 		for (let i = 0; i < this.state.dimensions; i += this.state.size) {
 			for (let j = 0; j < this.state.dimensions; j += this.state.size) {
 				const livingNB = this.neighboursCount(i, j);
+				board.grid[`${i}_${j}`] = this.state.grid[`${i}_${j}`];
 				if (
 					this.state.grid[`${i}_${j}`] === 'alive' &&
 					(livingNB > 3 || livingNB < 2)
