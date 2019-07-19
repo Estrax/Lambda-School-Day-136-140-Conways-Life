@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 class RulesPage extends React.Component {
 	render() {
 		return (
-			<div>
-				<h1>Rules</h1>
+			<div className='rules'>
+				<h1 className='title text-center'>Rules</h1>
 				<p>
 					In the game of life, each cell can have one out of multiple
 					states available - there, it can be alive or dead.
