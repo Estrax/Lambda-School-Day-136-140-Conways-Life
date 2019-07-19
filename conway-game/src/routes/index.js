@@ -16,7 +16,7 @@ const Routes = (props) => {
 	return (
 		<Router history={props.history}>
 			<Navbar />
-			<Route exact path='/' component={RouteNoAuthNeeded(GamePage)} />
+			<Route exact path='/' component={GamePage} />
 			{/* <Route
 				exact
 				path='/login'
@@ -28,16 +28,8 @@ const Routes = (props) => {
 				component={RouteNoAuthNeeded(RegisterPage)}
 			/> */}
 			{/* <Route exact path='/game' component={RouteNoAuthNeeded(GamePage)} /> */}
-			<Route
-				exact
-				path='/about'
-				component={RouteNoAuthNeeded(AboutPage)}
-			/>
-			<Route
-				exact
-				path='/rules'
-				component={RouteNoAuthNeeded(RulesPage)}
-			/>
+			<Route exact path='/about' component={AboutPage} />
+			<Route exact path='/rules' component={RulesPage} />
 		</Router>
 	);
 };
