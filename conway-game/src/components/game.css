@@ -1,0 +1,64 @@
+body {
+    font-family: 'Product Sans';
+    max-width: 100%;
+    width: 100%;
+    background: #000;
+}
+
+.about,
+.rules {
+    max-width: 80%;
+    margin: 0 auto;
+    border: 2px solid #f27dfd;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+    margin-top: 2rem;
+}
+
+.panel {
+    max-width: 80%;
+    margin: 2rem auto 0;
+    border: 2px solid #f27dfd;
+    justify-content: center;
+}
+
+.presets {
+    padding: 10px;
+    text-align: center;
+}
+
+.controls {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px dashed #f27dfd;
+}
+
+button {
+    display: inline-block;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    height: 2rem;
+    width: 150px;
+    margin: 0.5rem;
+    cursor: pointer;
+    background: #b28bc0;
+    color: #fff;
+}
+
+.title {
+    text-align: center;
+    color: #fff;
+    margin: 2rem auto;
+}
+
+.board {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+canvas {
+    display: inline-block;
+    background: #fff;
+}
