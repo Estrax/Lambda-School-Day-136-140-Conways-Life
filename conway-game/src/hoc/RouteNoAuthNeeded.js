@@ -7,13 +7,13 @@ export default (ComposedComponent) => {
 	class NoAuthentication extends Component {
 		componentWillMount() {
 			if (this.props.authenticated) {
-				history.push('/game');
+				history.push('/');
 			}
 		}
 
 		componentWillUpdate(nextProps) {
 			if (nextProps.authenticated) {
-				history.push('/game');
+				history.push('/');
 			}
 		}
 
